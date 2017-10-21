@@ -1,0 +1,4 @@
+*.sw[op]
+*.log
+.DS_Store
+/vendor/

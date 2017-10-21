@@ -1,0 +1,36 @@
+<div class="jumbotron">
+    <h1>Album list</h1>
+</div>
+
+<table class="table table-bordered table-striped">
+    <thead>
+    <tr>
+        <th>Id</th>
+        <th>Artist</th>
+        <th>Title</th>
+        <th></th>
+    </tr>
+    </thead>
+    <tbody>
+    <?php foreach ($this->Lists as $entity) { ?>
+        <?php
+        $urlParams = ['id' => $entity->getId()];
+        $updateUrl = $this->url('album-update', $urlParams);
+        $deleteUrl = $this->url('album-delete', $urlParams);
+        ?>
+        <tr>
+            <td><?php echo $entity->getId(); ?></td>
+            <td><?php echo $entity->getArtist(); ?></td>
+            <td><?php echo $entity->getTitle(); ?></td>
+            <td>
+                <a href="<?php echo $updateUrl; ?>" class="btn btn-success">
+                    <i class="fa fa-pencil"></i>
+                </a>
+                <a href="<?php echo $deleteUrl; ?>" class="btn btn-success">
+                    <i class="fa fa-trash"></i>
+                </a>
+            </td>
+        </tr>
+    <?php } ?>
+    </tbody>
+</table>
