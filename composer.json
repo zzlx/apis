@@ -1,5 +1,5 @@
 {
-    "name": "zzlx/framework",
+    "name": "zzlx/apis",
     "description": "A backend api service for frontend ui application.",
     "version": "1.0.0",
     "type": "libraries",
@@ -16,7 +16,7 @@
         "development-disable": "zf-development-mode disable",
         "development-enable": "zf-development-mode enable",
         "development-status": "zf-development-mode status",
-        "serve": "php -S 0.0.0.0:8080 -t usr/lib/public/"
+        "serve": "php -S 0.0.0.0:8080 -t public/"
     },
     "repositories": {
         "packagist": {
@@ -26,10 +26,8 @@
     },
     "autoload": {
         "psr-4": { 
-            "Zzlx\\Album\\": "src/album/src",
             "Zzlx\\App\\": "src/app/src",
-            "Zzlx\\Utils\\": "src/utils/src",
-            "Zzlx\\Wechat\\": "src/wechat/src" 
+            "Zzlx\\Wechat\\": "src/wechat/src"
 		    }
     },
     "minimum-stability": "dev",

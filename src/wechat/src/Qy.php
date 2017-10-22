@@ -4,7 +4,8 @@ namespace Zzlx\Wechat;
 /**
  * 企业微信管理
  */
-class Qy {
+class Qy 
+{
   
   private $access_token;  
   private $agentId;
