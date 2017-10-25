@@ -2,9 +2,7 @@
 return [
     'dependencies' => [
         'invokables' => [
-        ],
-        'factories'  => [
-            Zend\Expressive\Router\RouterInterface::class => Zend\Expressive\Router\FastRouteRouterFactory::class,
+            Zend\Expressive\Router\RouterInterface::class => Zend\Expressive\Router\FastRouteRouter::class,
         ],
     ],
 
@@ -13,10 +11,8 @@ return [
             // Enable caching support:
             'cache_enabled' => true,
              // Optional (but recommended) cache file path:
-            'cache_file'    => 'var/cache/fastroute.php',
+            'cache_file'    => 'data/cache/fastroute.php',
         ],
     ],
-
-    'routes' => [],
 ];
 

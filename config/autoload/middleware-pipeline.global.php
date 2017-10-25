@@ -9,24 +9,6 @@ use Zend\Stratigility\Middleware\OriginalMessages;
 use Zend\Expressive\Container\WhoopsErrorResponseGeneratorFactory;
 
 return [
-   // Add the following section to enable the new error handling:
-    'dependencies' => [
-        'invokables' => [
-            // See above section on "Original messages":
-            OriginalMessages::class => OriginalMessages::class,
-            Helper\BodyParams\BodyParamsMiddleware::class => Helper\BodyParams\BodyParamsMiddleware::class,
-        ],
-        'factories' => [
-            Helper\ServerUrlMiddleware::class => Helper\ServerUrlMiddlewareFactory::class,
-            Helper\UrlHelperMiddleware::class => Helper\UrlHelperMiddlewareFactory::class,
-
-            // Add the following three entries:
-            ErrorHandler::class => Container\ErrorHandlerFactory::class,
-            Middleware\ErrorResponseGenerator::class => WhoopsErrorResponseGeneratorFactory::class,
-            //Middleware\ErrorResponseGenerator::class => Container\ErrorResponseGeneratorFactory::class,
-            Middleware\NotFoundHandler::class => Container\NotFoundHandlerFactory::class,
-        ],
-    ],
     // This can be used to seed pre- and/or post-routing middleware
     'middleware_pipeline' => [
         // An array of middleware to register. Each item is of the following
@@ -67,7 +49,7 @@ return [
         'routing' => [
             'middleware' => [
                 Application::ROUTING_MIDDLEWARE,
-                Helper\UrlHelperMiddleware::class,
+                //Helper\UrlHelperMiddleware::class,
                 // Add more middleware here that needs to introspect the routing
                 // results; this might include:
                 // - route-based authentication

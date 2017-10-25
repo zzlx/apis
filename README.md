@@ -1,10 +1,10 @@
 # [APIs](https://www.zzlx.org)
 
-Provide a web API service writen by [PHP](https://secure.php.net)
+A web API service.
+
 
 ### References
 
-* [Git](https://git-scm.com)
 * [PHP-FIG](http://www.php-fig.org)
 * [Composer中文网](http://www.phpcomposer.com)
 * [Composer官网](https://composer.org)

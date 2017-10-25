@@ -1,14 +1,6 @@
 <?php
 namespace Zzlx\App;
 
-use Zend\Db;
-use Zend\Filter;
-use Zend\Hydrator;
-use Zend\I18n;
-use Zend\InputFilter;
-use Zend\Router;
-use Zend\Validator;
-use Zend\ConfigAggregator;
 
 /**
  * Provide base configuration for using the component.
@@ -29,10 +21,10 @@ class ConfigProvider
     {
         return [
             'dependencies' => $this->getDependencies(),
-            'routes' => $this->getRouteManagerConfig(),
+            'routes' => $this->getConfig(),
             'templates' => [
                 'paths' => [
-                    'album' => [dirname(__DIR__) . '/templates'],
+                    'app'  => [dirname(__DIR__) . '/templates'],
                 ],
             ],
         ];
@@ -48,14 +40,8 @@ class ConfigProvider
         return [
             'delegators' => [],
             'aliases' => [],
-            'invokables' => [
-                //Action\Hello::class => Action\Hello::class,
-                Helper\AuthorizationHelper::class => Helper\AuthorizationHelper::class,
-            ],
+            'invokables' => [],
             'factories' => [
-                \FastRoute\RouteCollector::class => Container\FastRouteCollectorFactory::class,
-                \FastRoute\DispatcherFactory::class => Container\FastRouteDispatcherFactory::class,
-                \Zend\Expressive\Router\RouterInterface::class => Container\RouterFactory::class,
                 Action\Hello::class => Action\HelloFactory::class,
                 Action\Lists::class => Action\ListsFactory::class,
                 Action\CreateForm::class   => Action\CreateFormFactory::class,
@@ -79,12 +65,12 @@ class ConfigProvider
      *
      * @return array
      */
-    public function getRouteManagerConfig()
+    public function getConfig()
     {
         return [
             [
                 'name'            => 'hello',
-                'path'            => '/',
+                'path'            => '/hello',
                 'middleware'      => Action\Hello::class,
                 'allowed_methods' => ['GET'],
             ],
@@ -157,28 +143,5 @@ class ConfigProvider
                 ],
             ],
         ];
-    }
-
-    /**
-     *
-     *
-     */
-    public function getConfig()
-    {
-        $configManager = new ConfigAggregator\ConfigAggregator([ 
-            Zzlx\App\ConfigProvider::class, 
-            Db\ConfigProvider::class, 
-            Filter\ConfigProvider::class, 
-            Hydrator\ConfigProvider::class, 
-            I18n\ConfigProvider::class, 
-            InputFilter\ConfigProvider::class, 
-            Router\ConfigProvider::class, 
-            Validator\ConfigProvider::class, 
-              new ConfigAggregator\PhpFileProvider(
-                    __DIR__ . '/autoload/{{,*.}global,{,*.}local,{,*.}config}.php'
-              ),
-        ]);
-
-        return new ArrayObject($configManager->getMergedConfig());
     }
 }

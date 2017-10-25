@@ -1,0 +1,60 @@
+{
+    "corpid": "wx9f6f43532374f4a3",
+    "gettoken_url": "https://qyapi.weixin.qq.com/cgi-bin/gettoken?corpid=%s&corpsecret=%s",
+    "agent": [
+        {
+            "AgentId": "txl",
+            "Name": "通讯录",
+            "Secret": "xr7-hzULylDz4FtS9iTiTwvJJknxKyciIubCzu7eHG4",
+            "AccessToken": "8qXok_1UCmIR1EQC8JEoFoROykwlIWDy8U0aZ3MVTxd0s9kn-k3M7addlIzULAf1O7F8v8MxxIrr3F0TUryOxCg4P2Qy2sh6KlW5JvoxeDIuNG8pXrwWsSI3HFaqC-n2JrK_Fn9hZTAtrkqCmVxmMGPubTyR46prMjU1Vd2o5ljOF__s3jVuxCNStU2Ug94RIFOdifIYiUBRd8G4HNRNAzLLgE7sQzdmD9wg1nGH2ALgGZPfcjbPAWSs8rO5_PWaarxcwXZm4cIbr5q-iuLEUZesndzKdQk5ZdE8JpdDWK0",
+            "ExpireTime": 1505203035,
+            "Token": "",
+            "EncodingAESKey": ""
+        },
+        {
+            "AgentId": "0",
+            "Name": "小助手",
+            "Secret": "GfZSBOterxXY4-0ghNIjqLTp9E9xA0kJHK2qmaBvbww",
+            "AccessToken": "CIdCKgW4XG3A-uGd9Jm1OZhMSXyu1hIXfJmhtFhcxj1l37WxUKoboWW0S4Zsqcz5Z_oMfest_Y5c9jnpFUf2PakDyEW7MMNA89uZp9KINHxbRi5CPOkvepdwbiihrHw0WITYCWpEWB36NG7SFbH74ElPqEayM2U6Kztnt_vylESpzOkv4K2m-o9exvYo_ak7o2geM9ggR0dRXUoPVyYAohaUkIi34WD2-7gUD682-N4WANmE52o7AMWhTpW_6v5s0KSdIb479SSJOhvM6oX_pxwg761f4OuZZgFsflolMhc",
+            "ExpireTime": 1505204031,
+            "Token": "v7KfyaI5o51wEuxnvB2GDyQ",
+            "EncodingAESKey": "Eu8xuosISSSxnMcSMQa1yCMMBvp8GTA47W5hgr5oTgZ"
+        },
+        {
+            "AgentId": "9",
+            "Name": "管理信息系统",
+            "Secret": "T7xTe4N75oMkfMx8UMJk-5uAjLa1NiZAebykiHUpDhY",
+            "AccessToken": "yFvKVnb_C3gGb-VQ6ApeEC5r4nm9LCOUcCV-1xv6wU4-2cMBPWD908SCDxZPyLOmV9BTFlDKEJUYlw-tL3XmuYBbT90cIierQaPRSpLK-OBx5XDJVntiaIllWsYsWbsIa1JEyyP7L_FKKJGbj-F-kZoxFFSqwR70nUtcCE46T4zf01DXI3DIMNnFTq3KjvNQIb8UYr2tHHcOAv4nuBn_ec4l3_ko3CqRN9xs69CesQ66X4xfYkniYBAcLyvAIt0LjtvgxS6ByhCBPnr92Jj8347Qy_tsrrMZQVuBCf_8j8M",
+            "ExpireTime": 1505202933,
+            "Token": "",
+            "EncodingAESKey": ""
+        },
+        {
+            "AgentId": "10",
+            "Name": "销售助理",
+            "Secret": "-s0U-zm26JhGxm88AuNLuSwATauBCE27Mkm2_xiA8pU",
+            "AccessToken": "yFvKVnb_C3gGb-VQ6ApeEC5r4nm9LCOUcCV-1xv6wU4-2cMBPWD908SCDxZPyLOmV9BTFlDKEJUYlw-tL3XmuYBbT90cIierQaPRSpLK-OBx5XDJVntiaIllWsYsWbsIa1JEyyP7L_FKKJGbj-F-kZoxFFSqwR70nUtcCE46T4zf01DXI3DIMNnFTq3KjvNQIb8UYr2tHHcOAv4nuBn_ec4l3_ko3CqRN9xs69CesQ66X4xfYkniYBAcLyvAIt0LjtvgxS6ByhCBPnr92Jj8347Qy_tsrrMZQVuBCf_8j8M",
+            "ExpireTime": 1505202933,
+            "Token": "",
+            "EncodingAESKey": ""
+        },
+        {
+            "AgentId": "11",
+            "Name": "数据统计汇总",
+            "Secret": "PPktiQy5DoarPX8iI3mFGveGo7JUAi-x79kbI4F_TJE",
+            "AccessToken": "yFvKVnb_C3gGb-VQ6ApeEC5r4nm9LCOUcCV-1xv6wU4-2cMBPWD908SCDxZPyLOmV9BTFlDKEJUYlw-tL3XmuYBbT90cIierQaPRSpLK-OBx5XDJVntiaIllWsYsWbsIa1JEyyP7L_FKKJGbj-F-kZoxFFSqwR70nUtcCE46T4zf01DXI3DIMNnFTq3KjvNQIb8UYr2tHHcOAv4nuBn_ec4l3_ko3CqRN9xs69CesQ66X4xfYkniYBAcLyvAIt0LjtvgxS6ByhCBPnr92Jj8347Qy_tsrrMZQVuBCf_8j8M",
+            "ExpireTime": 1505202933,
+            "Token": "",
+            "EncodingAESKey": ""
+        },
+        {
+            "AgentId": "1000002",
+            "Name": "功能测试",
+            "Secret": "zpWb8B5DWXId2TFJzeCK3fnTAPp2qPDUldGtz_QBMUY",
+            "AccessToken": "yFvKVnb_C3gGb-VQ6ApeEC5r4nm9LCOUcCV-1xv6wU4-2cMBPWD908SCDxZPyLOmV9BTFlDKEJUYlw-tL3XmuYBbT90cIierQaPRSpLK-OBx5XDJVntiaIllWsYsWbsIa1JEyyP7L_FKKJGbj-F-kZoxFFSqwR70nUtcCE46T4zf01DXI3DIMNnFTq3KjvNQIb8UYr2tHHcOAv4nuBn_ec4l3_ko3CqRN9xs69CesQ66X4xfYkniYBAcLyvAIt0LjtvgxS6ByhCBPnr92Jj8347Qy_tsrrMZQVuBCf_8j8M",
+            "ExpireTime": 1505202933,
+            "Token": "",
+            "EncodingAESKey": ""
+        }
+    ]
+}

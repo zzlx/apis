@@ -47,7 +47,7 @@ class Lists
         ];
 
         return new HtmlResponse(
-            $this->template->render('album::lists', $data)
+            $this->template->render('app::lists', $data)
         );
     }
 }
