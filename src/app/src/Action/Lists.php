@@ -4,7 +4,7 @@ namespace Zzlx\App\Action;
 use Zzlx\App\Model\Repository\RepositoryInterface;
 use Psr\Http\Message\ResponseInterface;
 use Psr\Http\Message\ServerRequestInterface;
-use Zend\Diactoros\Response\HtmlResponse;
+use Zend\Diactoros\Response\JsonResponse;
 use Zend\Expressive\Template\TemplateRendererInterface;
 
 class Lists
@@ -42,12 +42,9 @@ class Lists
         ResponseInterface $response,
         callable $next = null
     ) {
-        $data = [
-            'Lists' => $this->repository->fetchAll(),
-        ];
 
-        return new HtmlResponse(
-            $this->template->render('app::lists', $data)
+        return new JsonResponse(
+            $this->repository->fetchAll()
         );
     }
 }

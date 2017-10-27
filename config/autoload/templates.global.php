@@ -25,6 +25,7 @@ return [
             'layout' => [dirname(dirname(__DIR__)) . '/templates/layout'],
             'error'  => [dirname(dirname(__DIR__)) . '/templates/error'],
         ],
+        'extension' => 'phtml',
     ],
 
     'view_helpers' => [

@@ -27,6 +27,8 @@
     "autoload": {
         "psr-4": { 
             "Zzlx\\App\\": "src/app/src",
+            "Zzlx\\Db\\": "src/db/src",
+            "Zzlx\\Util\\": "src/util/src",
             "Zzlx\\Wechat\\": "src/wechat/src"
 		    }
     },

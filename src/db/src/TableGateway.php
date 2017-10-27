@@ -1,5 +1,5 @@
 <?php
-namespace Zzlx\App\Db;
+namespace Zzlx\Db;
 
 use Zzlx\App\Model\Entity;
 use Zzlx\App\Model\Storage\StorageInterface;

@@ -14,6 +14,7 @@ class Hello implements MiddlewareInterface
 
     public function __construct(TemplateRendererInterface $renderer)
     {
+
         $this->renderer = $renderer;
     }
 

@@ -1,6 +1,7 @@
 <?php
 namespace Zzlx\App;
 
+use Zzlx\Db;
 
 /**
  * Provide base configuration for using the component.
@@ -55,7 +56,7 @@ class ConfigProvider
                 Model\InputFilter\InputFilter::class => Model\InputFilter\InputFilterFactory::class,
                 Model\Repository\RepositoryInterface::class => Model\Repository\RepositoryFactory::class,
                 Model\Storage\StorageInterface::class => Db\TableGatewayFactory::class,
-                Middleware\VerifyUser::class => Container\VerifyUserFactory::class,
+                //Middleware\VerifyUser::class => Container\VerifyUserFactory::class,
             ],
         ];
     }
