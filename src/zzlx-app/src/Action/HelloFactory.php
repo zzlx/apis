@@ -16,6 +16,8 @@ class HelloFactory implements FactoryInterface
      */
     public function __invoke(ContainerInterface $container, $requestedName, array $options = null)
     {
-        return new Hello($container->get(\Zend\Expressive\Template\TemplateRendererInterface::class));
+        return new Hello(
+            $container->get(\Zend\Expressive\Template\TemplateRendererInterface::class)
+        );
     }
 }

@@ -12,7 +12,7 @@
     </tr>
     </thead>
     <tbody>
-    <?php foreach ($this->data as $entity) : ?>
+    <?php foreach ($datas as $entity) : ?>
         <?php
         $urlParams = ['id' => $entity->getId()];
         $updateUrl = $this->url('album-update', $urlParams);

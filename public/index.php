@@ -2,13 +2,14 @@
 /**
  * This makes our life easier when dealing with paths. 
  * Everything is relative to the application root now.
- * API服务部署时，应调整入口程序的根目录位置 
+ * API服务部署时，用于调整入口程序根目录
  *
  */
-chdir(dirname(__DIR__));
+//chdir(dirname(__DIR__));
 
 /**
  * Composer autoloading
+ *
  */
 require dirname(__DIR__) . '/vendor/autoload.php';
 

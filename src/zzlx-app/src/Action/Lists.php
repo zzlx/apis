@@ -42,9 +42,8 @@ class Lists
         ResponseInterface $response,
         callable $next = null
     ) {
+        $data = $this->repository->fetchAll();
 
-        return new JsonResponse(
-            $this->repository->fetchAll()
-        );
+        return new JsonResponse($data, 200, array(), JSON_PRETTY_PRINT);
     }
 }

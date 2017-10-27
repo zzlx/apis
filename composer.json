@@ -26,10 +26,10 @@
     },
     "autoload": {
         "psr-4": { 
-            "Zzlx\\App\\": "src/app/src",
-            "Zzlx\\Db\\": "src/db/src",
-            "Zzlx\\Util\\": "src/util/src",
-            "Zzlx\\Wechat\\": "src/wechat/src"
+            "Zzlx\\App\\": "src/zzlx-app/src",
+            "Zzlx\\Db\\": "src/zzlx-db/src",
+            "Zzlx\\Util\\": "src/zzlx-util/src",
+            "Zzlx\\Wechat\\": "src/zzlx-wechat/src"
 		    }
     },
     "minimum-stability": "dev",

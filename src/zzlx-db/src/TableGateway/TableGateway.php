@@ -1,5 +1,5 @@
 <?php
-namespace Zzlx\Db;
+namespace Zzlx\Db\TableGateway;
 
 use Zzlx\App\Model\Entity;
 use Zzlx\App\Model\Storage\StorageInterface;

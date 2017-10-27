@@ -1,7 +1,11 @@
 <?php
 namespace Zzlx\App;
 
-use Zzlx\Db;
+use Zzlx\Db\TableGateway\TableGatewayFactory;
+use Zend\Expressive\Router\RouterInterface;
+use Zend\Expressive\Router\FastRouteRouter;
+use Zend\Expressive\Template\TemplateRendererInterface;
+use Zend\Expressive\Plates\PlatesRendererFactory;
 
 /**
  * Provide base configuration for using the component.
@@ -23,10 +27,19 @@ class ConfigProvider
         return [
             'dependencies' => $this->getDependencies(),
             'routes' => $this->getConfig(),
+            'map' => [
+                'layout/default' => dirname(__DIR__) . '/templates/layout/default.phtml',
+                'error/error'    => dirname(__DIR__) . '/templates/error/error.phtml',
+                'error/404'      => dirname(__DIR__) . '/templates/error/404.phtml',
+            ],
             'templates' => [
+                'layout' => 'layout/default',
                 'paths' => [
-                    'app'  => [dirname(__DIR__) . '/templates'],
+                    'app'    => [dirname(__DIR__) . '/templates'],
+                    'layout' => [dirname(__DIR__) . '/templates/layout'],
+                    'error'  => [dirname(__DIR__) . '/templates/error'],
                 ],
+                'extension' => 'phtml',
             ],
         ];
     }
@@ -41,8 +54,13 @@ class ConfigProvider
         return [
             'delegators' => [],
             'aliases' => [],
-            'invokables' => [],
+            'invokables' => [
+                //FastRouteRouter
+                RouterInterface::class => FastRouteRouter::class,
+            ],
             'factories' => [
+                //use Plates templates
+                TemplateRendererInterface::class => PlatesRendererFactory::class,
                 Action\Hello::class => Action\HelloFactory::class,
                 Action\Lists::class => Action\ListsFactory::class,
                 Action\CreateForm::class   => Action\CreateFormFactory::class,
@@ -55,7 +73,7 @@ class ConfigProvider
                 Form\DeleteForm::class => Form\DeleteFormFactory::class,
                 Model\InputFilter\InputFilter::class => Model\InputFilter\InputFilterFactory::class,
                 Model\Repository\RepositoryInterface::class => Model\Repository\RepositoryFactory::class,
-                Model\Storage\StorageInterface::class => Db\TableGatewayFactory::class,
+                Model\Storage\StorageInterface::class => TableGatewayFactory::class,
                 //Middleware\VerifyUser::class => Container\VerifyUserFactory::class,
             ],
         ];
@@ -70,8 +88,8 @@ class ConfigProvider
     {
         return [
             [
-                'name'            => 'hello',
-                'path'            => '/hello',
+                'name'            => 'home',
+                'path'            => '/',
                 'middleware'      => Action\Hello::class,
                 'allowed_methods' => ['GET'],
             ],

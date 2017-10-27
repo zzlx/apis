@@ -9,17 +9,17 @@ class Entity implements ArraySerializableInterface
     /**
      * @var int
      */
-    private $id;
+    public $id;
 
     /**
      * @var string
      */
-    private $artist;
+    public $artist;
 
     /**
      * @var string
      */
-    private $title;
+    public $title;
 
     /**
      * @return int
